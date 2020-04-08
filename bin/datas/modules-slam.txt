@@ -1,0 +1,64 @@
+SLAM1 - Exploitation d'un schéma de données
+Ce module aborde les savoirs et savoir-faire de base liés à la modélisation de données et à l’implémentation d’une base de données associée à une solution logicielle.
+Savoir-faire
+Modifier un schéma de données et l’implantation de la base de données correspondante
+Utiliser un outil de génération et de rétro-conception de base de données
+Adapter une application exploitant une base de données à l’évolution de son schéma
+Savoirs associés
+Modèles de représentation des données
+Techniques d’implémentation d’une base de données
+Langage de définition de données et de contraintes
+SLAM2 - Programmation objet
+Ce module aborde les savoirs et savoir-faire liés à la programmation d’une solution applicative dans un environnement de développement orienté objet. Il s’intéresse notamment à la configuration et à l’utilisation rationnelle d’un environnement de développement.
+Savoir-faire
+Programmer à l’aide d’un langage de programmation objet
+Configurer et utiliser un environnement de développement
+Mettre au point un programme
+Savoirs associés
+Concepts avancés de la programmation objet
+Techniques et méthodes associées à la programmation objet
+Caractéristiques et fonctionnalités des environnements de développement
+SLAM3 - Conception et adaptation d'une base de données
+Ce module aborde les savoirs et savoir-faire liés à la conception et à l’adaptation d’une base de données et à la mise en œuvre des outils de programmation associés.
+Le recours à un langage de programmation associé à un SGBD permet d’implémenter les concepts abordés, notamment les contraintes.
+Savoir-faire
+Concevoir une base de données
+Valider un schéma de base de données
+Programmer dans l’environnement de développement associé à un SGBD
+Savoirs associés
+Modèles de représentation des données
+Représentation et implémentation des contraintes
+Langage de programmation associé à un SGBD
+SLAM4 - Réalisation et maintenance de composants logiciels
+Ce module aborde les savoirs et savoir-faire liés à la mise en œuvre d’environnements de développement. Il s’intéresse notamment à l’utilisation et à l’enrichissement de bibliothèques de composants logiciels et à la programmation, notamment au sein d’un framework.
+Savoir-faire
+Programmer un composant logiciel
+Exploiter une bibliothèque de composants
+Adapter un composant logiciel
+Valider et documenter un composant logiciel
+Programmer au sein d’un framework
+Savoirs associés
+Caractéristiques d’un framework
+Techniques de gestion des évènements
+Techniques de gestion des erreurs
+Techniques de sécurisation
+Persistance et couche d’accès aux données, technologies et techniques associées
+Techniques et outils d’analyse et de rétro-conception
+Techniques de test unitaire et d’intégration d’un composant logiciel
+SLAM5 - Conception et adaptation de solutions logicielles
+Ce module aborde les savoirs et savoirs faire liés à la participation à des projets de conception d’une solution applicative ainsi qu’aux activités de maintien en condition opérationnelle des services associés et de réponse aux besoins d’évolution.
+Savoir-faire
+Justifier le choix d’une architecture applicative
+Participer à un processus de production d’une solution applicative
+Gérer les versions d’une solution applicative
+Développer en équipe
+Valider et documenter une solution applicative
+Répondre à une demande d’assistance
+Résoudre un incident
+Savoirs associés
+Cahier des charges et spécifications
+Méthodes, normes et standards associés au processus de conception
+Cycle de production d’un service et acteurs associés
+Typologie des offres de solutions logicielles, modèles économiques et coûts associés
+Architectures applicatives : concepts avancés
+Test d’acceptation d’une solution logicielle
