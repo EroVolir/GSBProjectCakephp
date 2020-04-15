@@ -10,10 +10,10 @@ use Cake\ORM\Entity;
  * @property \Cake\I18n\FrozenDate|null $dateVisite
  * @property string|null $commentaire
  * @property string|null $bilan
- * @property int|null $Practicien_id
+ * @property int|null $Praticien_id
  * @property int|null $Visiteur_id
  *
- * @property \App\Model\Entity\Practicien $practicien
+ * @property \App\Model\Entity\Praticien $praticien
  * @property \App\Model\Entity\Visiteur $visiteur
  */
 class Visite extends Entity
@@ -31,9 +31,9 @@ class Visite extends Entity
         'dateVisite' => true,
         'commentaire' => true,
         'bilan' => true,
-        'Practicien_id' => true,
+        'Praticien_id' => true,
         'Visiteur_id' => true,
-        'practicien' => true,
+        'praticien' => true,
         'visiteur' => true
     ];
 }

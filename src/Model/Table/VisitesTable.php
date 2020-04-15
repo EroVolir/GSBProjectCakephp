@@ -9,7 +9,7 @@ use Cake\Validation\Validator;
 /**
  * Visites Model
  *
- * @property \App\Model\Table\PracticiensTable&\Cake\ORM\Association\BelongsTo $Practiciens
+ * @property \App\Model\Table\PraticiensTable&\Cake\ORM\Association\BelongsTo $Praticiens
  * @property \App\Model\Table\VisiteursTable&\Cake\ORM\Association\BelongsTo $Visiteurs
  *
  * @method \App\Model\Entity\Visite get($primaryKey, $options = [])
@@ -37,8 +37,8 @@ class VisitesTable extends Table
         $this->setDisplayField('id');
         $this->setPrimaryKey('id');
 
-        $this->belongsTo('Practiciens', [
-            'foreignKey' => 'Practicien_id'
+        $this->belongsTo('Praticiens', [
+            'foreignKey' => 'Praticien_id'
         ]);
         $this->belongsTo('Visiteurs', [
             'foreignKey' => 'Visiteur_id'
@@ -83,7 +83,7 @@ class VisitesTable extends Table
      */
     public function buildRules(RulesChecker $rules)
     {
-        $rules->add($rules->existsIn(['Practicien_id'], 'Practiciens'));
+        $rules->add($rules->existsIn(['Praticien_id'], 'Praticiens'));
         $rules->add($rules->existsIn(['Visiteur_id'], 'Visiteurs'));
 
         return $rules;

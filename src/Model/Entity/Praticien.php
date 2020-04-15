@@ -4,7 +4,7 @@ namespace App\Model\Entity;
 use Cake\ORM\Entity;
 
 /**
- * Practicien Entity
+ * Praticien Entity
  *
  * @property int $id
  * @property string|null $nom
@@ -22,7 +22,7 @@ use Cake\ORM\Entity;
  * @property \App\Model\Entity\Type $type
  * @property \App\Model\Entity\Visiteur $visiteur
  */
-class Practicien extends Entity
+class Praticien extends Entity
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().

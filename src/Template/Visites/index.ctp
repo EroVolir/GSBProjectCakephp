@@ -8,8 +8,8 @@
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Html->link(__('New Visite'), ['action' => 'add']) ?></li>
-        <li><?= $this->Html->link(__('List Practiciens'), ['controller' => 'Practiciens', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New Practicien'), ['controller' => 'Practiciens', 'action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('List Praticiens'), ['controller' => 'Praticiens', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('New Praticien'), ['controller' => 'Praticiens', 'action' => 'add']) ?></li>
         <li><?= $this->Html->link(__('List Visiteurs'), ['controller' => 'Visiteurs', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Visiteur'), ['controller' => 'Visiteurs', 'action' => 'add']) ?></li>
     </ul>
@@ -23,7 +23,7 @@
                 <th scope="col"><?= $this->Paginator->sort('dateVisite') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('commentaire') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('bilan') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('Practicien_id') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('Praticien_id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('Visiteur_id') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
@@ -35,7 +35,7 @@
                 <td><?= h($visite->dateVisite) ?></td>
                 <td><?= h($visite->commentaire) ?></td>
                 <td><?= h($visite->bilan) ?></td>
-                <td><?= $visite->has('practicien') ? $this->Html->link($visite->practicien->id, ['controller' => 'Practiciens', 'action' => 'view', $visite->practicien->id]) : '' ?></td>
+                <td><?= $visite->has('praticien') ? $this->Html->link($visite->praticien->id, ['controller' => 'Praticiens', 'action' => 'view', $visite->praticien->id]) : '' ?></td>
                 <td><?= $visite->has('visiteur') ? $this->Html->link($visite->visiteur->id, ['controller' => 'Visiteurs', 'action' => 'view', $visite->visiteur->id]) : '' ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $visite->id]) ?>

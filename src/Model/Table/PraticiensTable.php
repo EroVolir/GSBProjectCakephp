@@ -7,22 +7,22 @@ use Cake\ORM\Table;
 use Cake\Validation\Validator;
 
 /**
- * Practiciens Model
+ * Praticiens Model
  *
  * @property \App\Model\Table\SpecialitesTable&\Cake\ORM\Association\BelongsTo $Specialites
  * @property \App\Model\Table\TypesTable&\Cake\ORM\Association\BelongsTo $Types
  * @property \App\Model\Table\VisiteursTable&\Cake\ORM\Association\BelongsTo $Visiteurs
  *
- * @method \App\Model\Entity\Practicien get($primaryKey, $options = [])
- * @method \App\Model\Entity\Practicien newEntity($data = null, array $options = [])
- * @method \App\Model\Entity\Practicien[] newEntities(array $data, array $options = [])
- * @method \App\Model\Entity\Practicien|false save(\Cake\Datasource\EntityInterface $entity, $options = [])
- * @method \App\Model\Entity\Practicien saveOrFail(\Cake\Datasource\EntityInterface $entity, $options = [])
- * @method \App\Model\Entity\Practicien patchEntity(\Cake\Datasource\EntityInterface $entity, array $data, array $options = [])
- * @method \App\Model\Entity\Practicien[] patchEntities($entities, array $data, array $options = [])
- * @method \App\Model\Entity\Practicien findOrCreate($search, callable $callback = null, $options = [])
+ * @method \App\Model\Entity\Praticien get($primaryKey, $options = [])
+ * @method \App\Model\Entity\Praticien newEntity($data = null, array $options = [])
+ * @method \App\Model\Entity\Praticien[] newEntities(array $data, array $options = [])
+ * @method \App\Model\Entity\Praticien|false save(\Cake\Datasource\EntityInterface $entity, $options = [])
+ * @method \App\Model\Entity\Praticien saveOrFail(\Cake\Datasource\EntityInterface $entity, $options = [])
+ * @method \App\Model\Entity\Praticien patchEntity(\Cake\Datasource\EntityInterface $entity, array $data, array $options = [])
+ * @method \App\Model\Entity\Praticien[] patchEntities($entities, array $data, array $options = [])
+ * @method \App\Model\Entity\Praticien findOrCreate($search, callable $callback = null, $options = [])
  */
-class PracticiensTable extends Table
+class PraticiensTable extends Table
 {
     /**
      * Initialize method
@@ -34,7 +34,7 @@ class PracticiensTable extends Table
     {
         parent::initialize($config);
 
-        $this->setTable('practiciens');
+        $this->setTable('praticiens');
         $this->setDisplayField('id');
         $this->setPrimaryKey('id');
 

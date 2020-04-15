@@ -14,8 +14,8 @@
             )
         ?></li>
         <li><?= $this->Html->link(__('List Visites'), ['action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('List Practiciens'), ['controller' => 'Practiciens', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New Practicien'), ['controller' => 'Practiciens', 'action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('List Praticiens'), ['controller' => 'Praticiens', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('New Praticien'), ['controller' => 'Praticiens', 'action' => 'add']) ?></li>
         <li><?= $this->Html->link(__('List Visiteurs'), ['controller' => 'Visiteurs', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Visiteur'), ['controller' => 'Visiteurs', 'action' => 'add']) ?></li>
     </ul>
@@ -28,7 +28,7 @@
             echo $this->Form->control('dateVisite', ['empty' => true]);
             echo $this->Form->control('commentaire');
             echo $this->Form->control('bilan');
-            echo $this->Form->control('Practicien_id', ['options' => $practiciens, 'empty' => true]);
+            echo $this->Form->control('Praticien_id', ['options' => $praticiens, 'empty' => true]);
             echo $this->Form->control('Visiteur_id', ['options' => $visiteurs, 'empty' => true]);
         ?>
     </fieldset>

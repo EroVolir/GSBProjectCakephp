@@ -20,7 +20,7 @@ class VisitesController extends AppController
     public function index()
     {
         $this->paginate = [
-            'contain' => ['Practiciens', 'Visiteurs']
+            'contain' => ['Praticiens', 'Visiteurs']
         ];
         $visites = $this->paginate($this->Visites);
 
@@ -37,7 +37,7 @@ class VisitesController extends AppController
     public function view($id = null)
     {
         $visite = $this->Visites->get($id, [
-            'contain' => ['Practiciens', 'Visiteurs']
+            'contain' => ['Praticiens', 'Visiteurs']
         ]);
 
         $this->set('visite', $visite);
@@ -60,9 +60,9 @@ class VisitesController extends AppController
             }
             $this->Flash->error(__('The visite could not be saved. Please, try again.'));
         }
-        $practiciens = $this->Visites->Practiciens->find('list', ['limit' => 200]);
+        $praticiens = $this->Visites->Praticiens->find('list', ['limit' => 200]);
         $visiteurs = $this->Visites->Visiteurs->find('list', ['limit' => 200]);
-        $this->set(compact('visite', 'practiciens', 'visiteurs'));
+        $this->set(compact('visite', 'praticiens', 'visiteurs'));
     }
 
     /**
@@ -86,9 +86,9 @@ class VisitesController extends AppController
             }
             $this->Flash->error(__('The visite could not be saved. Please, try again.'));
         }
-        $practiciens = $this->Visites->Practiciens->find('list', ['limit' => 200]);
+        $praticiens = $this->Visites->Praticiens->find('list', ['limit' => 200]);
         $visiteurs = $this->Visites->Visiteurs->find('list', ['limit' => 200]);
-        $this->set(compact('visite', 'practiciens', 'visiteurs'));
+        $this->set(compact('visite', 'praticiens', 'visiteurs'));
     }
 
     /**

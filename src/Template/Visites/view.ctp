@@ -11,8 +11,8 @@
         <li><?= $this->Form->postLink(__('Delete Visite'), ['action' => 'delete', $visite->id], ['confirm' => __('Are you sure you want to delete # {0}?', $visite->id)]) ?> </li>
         <li><?= $this->Html->link(__('List Visites'), ['action' => 'index']) ?> </li>
         <li><?= $this->Html->link(__('New Visite'), ['action' => 'add']) ?> </li>
-        <li><?= $this->Html->link(__('List Practiciens'), ['controller' => 'Practiciens', 'action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('New Practicien'), ['controller' => 'Practiciens', 'action' => 'add']) ?> </li>
+        <li><?= $this->Html->link(__('List Praticiens'), ['controller' => 'Praticiens', 'action' => 'index']) ?> </li>
+        <li><?= $this->Html->link(__('New Praticien'), ['controller' => 'Praticiens', 'action' => 'add']) ?> </li>
         <li><?= $this->Html->link(__('List Visiteurs'), ['controller' => 'Visiteurs', 'action' => 'index']) ?> </li>
         <li><?= $this->Html->link(__('New Visiteur'), ['controller' => 'Visiteurs', 'action' => 'add']) ?> </li>
     </ul>
@@ -29,8 +29,8 @@
             <td><?= h($visite->bilan) ?></td>
         </tr>
         <tr>
-            <th scope="row"><?= __('Practicien') ?></th>
-            <td><?= $visite->has('practicien') ? $this->Html->link($visite->practicien->id, ['controller' => 'Practiciens', 'action' => 'view', $visite->practicien->id]) : '' ?></td>
+            <th scope="row"><?= __('Praticien') ?></th>
+            <td><?= $visite->has('praticien') ? $this->Html->link($visite->praticien->id, ['controller' => 'Praticiens', 'action' => 'view', $visite->praticien->id]) : '' ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Visiteur') ?></th>

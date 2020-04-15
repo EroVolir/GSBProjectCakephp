@@ -1,13 +1,13 @@
 <?php
 /**
  * @var \App\View\AppView $this
- * @var \App\Model\Entity\Practicien[]|\Cake\Collection\CollectionInterface $practiciens
+ * @var \App\Model\Entity\Praticien[]|\Cake\Collection\CollectionInterface $praticiens
  */
 ?>
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('New Practicien'), ['action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('New Praticien'), ['action' => 'add']) ?></li>
         <li><?= $this->Html->link(__('List Specialites'), ['controller' => 'Specialites', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Specialite'), ['controller' => 'Specialites', 'action' => 'add']) ?></li>
         <li><?= $this->Html->link(__('List Types'), ['controller' => 'Types', 'action' => 'index']) ?></li>
@@ -16,8 +16,8 @@
         <li><?= $this->Html->link(__('New Visiteur'), ['controller' => 'Visiteurs', 'action' => 'add']) ?></li>
     </ul>
 </nav>
-<div class="practiciens index large-9 medium-8 columns content">
-    <h3><?= __('Practiciens') ?></h3>
+<div class="praticiens index large-9 medium-8 columns content">
+    <h3><?= __('Praticiens') ?></h3>
     <table cellpadding="0" cellspacing="0">
         <thead>
             <tr>
@@ -36,23 +36,23 @@
             </tr>
         </thead>
         <tbody>
-            <?php foreach ($practiciens as $practicien): ?>
+            <?php foreach ($praticiens as $praticien): ?>
             <tr>
-                <td><?= $this->Number->format($practicien->id) ?></td>
-                <td><?= h($practicien->nom) ?></td>
-                <td><?= h($practicien->prenom) ?></td>
-                <td><?= h($practicien->tel) ?></td>
-                <td><?= h($practicien->mail) ?></td>
-                <td><?= h($practicien->adresse) ?></td>
-                <td><?= $this->Number->format($practicien->codepostal) ?></td>
-                <td><?= h($practicien->ville) ?></td>
-                <td><?= $practicien->has('specialite') ? $this->Html->link($practicien->specialite->id, ['controller' => 'Specialites', 'action' => 'view', $practicien->specialite->id]) : '' ?></td>
-                <td><?= $practicien->has('type') ? $this->Html->link($practicien->type->id, ['controller' => 'Types', 'action' => 'view', $practicien->type->id]) : '' ?></td>
-                <td><?= $practicien->has('visiteur') ? $this->Html->link($practicien->visiteur->id, ['controller' => 'Visiteurs', 'action' => 'view', $practicien->visiteur->id]) : '' ?></td>
+                <td><?= $this->Number->format($praticien->id) ?></td>
+                <td><?= h($praticien->nom) ?></td>
+                <td><?= h($praticien->prenom) ?></td>
+                <td><?= h($praticien->tel) ?></td>
+                <td><?= h($praticien->mail) ?></td>
+                <td><?= h($praticien->adresse) ?></td>
+                <td><?= $this->Number->format($praticien->codepostal) ?></td>
+                <td><?= h($praticien->ville) ?></td>
+                <td><?= $praticien->has('specialite') ? $this->Html->link($praticien->specialite->id, ['controller' => 'Specialites', 'action' => 'view', $praticien->specialite->id]) : '' ?></td>
+                <td><?= $praticien->has('type') ? $this->Html->link($praticien->type->id, ['controller' => 'Types', 'action' => 'view', $praticien->type->id]) : '' ?></td>
+                <td><?= $praticien->has('visiteur') ? $this->Html->link($praticien->visiteur->id, ['controller' => 'Visiteurs', 'action' => 'view', $praticien->visiteur->id]) : '' ?></td>
                 <td class="actions">
-                    <?= $this->Html->link(__('View'), ['action' => 'view', $practicien->id]) ?>
-                    <?= $this->Html->link(__('Edit'), ['action' => 'edit', $practicien->id]) ?>
-                    <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $practicien->id], ['confirm' => __('Are you sure you want to delete # {0}?', $practicien->id)]) ?>
+                    <?= $this->Html->link(__('View'), ['action' => 'view', $praticien->id]) ?>
+                    <?= $this->Html->link(__('Edit'), ['action' => 'edit', $praticien->id]) ?>
+                    <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $praticien->id], ['confirm' => __('Are you sure you want to delete # {0}?', $praticien->id)]) ?>
                 </td>
             </tr>
             <?php endforeach; ?>

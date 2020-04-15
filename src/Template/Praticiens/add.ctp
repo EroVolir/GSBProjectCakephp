@@ -1,13 +1,13 @@
 <?php
 /**
  * @var \App\View\AppView $this
- * @var \App\Model\Entity\Practicien $practicien
+ * @var \App\Model\Entity\Praticien $praticien
  */
 ?>
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('List Practiciens'), ['action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('List Praticiens'), ['action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('List Specialites'), ['controller' => 'Specialites', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Specialite'), ['controller' => 'Specialites', 'action' => 'add']) ?></li>
         <li><?= $this->Html->link(__('List Types'), ['controller' => 'Types', 'action' => 'index']) ?></li>
@@ -16,10 +16,10 @@
         <li><?= $this->Html->link(__('New Visiteur'), ['controller' => 'Visiteurs', 'action' => 'add']) ?></li>
     </ul>
 </nav>
-<div class="practiciens form large-9 medium-8 columns content">
-    <?= $this->Form->create($practicien) ?>
+<div class="praticiens form large-9 medium-8 columns content">
+    <?= $this->Form->create($praticien) ?>
     <fieldset>
-        <legend><?= __('Add Practicien') ?></legend>
+        <legend><?= __('Add Praticien') ?></legend>
         <?php
             echo $this->Form->control('nom');
             echo $this->Form->control('prenom');
