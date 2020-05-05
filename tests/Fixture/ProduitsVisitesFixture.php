@@ -20,8 +20,8 @@ class ProduitsVisitesFixture extends TestFixture
         'Visite_id' => ['type' => 'integer', 'length' => 10, 'null' => false, 'default' => null, 'precision' => null, 'comment' => null, 'unsigned' => null, 'autoIncrement' => null],
         '_constraints' => [
             'primary' => ['type' => 'primary', 'columns' => ['Produit_id', 'Visite_id'], 'length' => []],
-            'FK_Produits_Visites_Produits' => ['type' => 'foreign', 'columns' => ['Produit_id'], 'references' => ['Produits', 'id'], 'update' => 'noAction', 'delete' => 'noAction', 'length' => []],
             'FK_Produits_Visites_Visites' => ['type' => 'foreign', 'columns' => ['Visite_id'], 'references' => ['Visites', 'id'], 'update' => 'noAction', 'delete' => 'noAction', 'length' => []],
+            'FK_Produits_Visites_Produits' => ['type' => 'foreign', 'columns' => ['Produit_id'], 'references' => ['Produits', 'id'], 'update' => 'noAction', 'delete' => 'noAction', 'length' => []],
         ],
     ];
     // @codingStandardsIgnoreEnd

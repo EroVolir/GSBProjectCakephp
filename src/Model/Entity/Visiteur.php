@@ -13,6 +13,9 @@ use Cake\ORM\Entity;
  * @property string|null $tel
  * @property string|null $mail
  * @property \Cake\I18n\FrozenDate|null $dateEmbauche
+ * @property int|null $user_id
+ *
+ * @property \App\Model\Entity\User $user
  */
 class Visiteur extends Entity
 {
@@ -31,6 +34,8 @@ class Visiteur extends Entity
         'prenom' => true,
         'tel' => true,
         'mail' => true,
-        'dateEmbauche' => true
+        'dateEmbauche' => true,
+        'user_id' => true,
+        'user' => true
     ];
 }

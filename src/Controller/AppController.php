@@ -15,7 +15,15 @@
 namespace App\Controller;
 
 use Cake\Controller\Controller;
+use Cake\ORM\Query;
+use Cake\ORM\RulesChecker;
+use Cake\ORM\Table;
+use Cake\Validation\Validator;
+use Cake\Auth\DefaultPasswordHasher;
+use Cake\Utility\Text;
 use Cake\Event\Event;
+use Cake\Utility\Security;
+
 
 /**
  * Application Controller
@@ -37,19 +45,33 @@ class AppController extends Controller
      *
      * @return void
      */
-    public function initialize()
-    {
-        parent::initialize();
+     public function initialize()
+     {
+         parent::initialize();
 
-        $this->loadComponent('RequestHandler', [
-            'enableBeforeRedirect' => false,
+         $this->loadComponent('RequestHandler', [
+             'enableBeforeRedirect' => false,
+         ]);
+         $this->loadComponent('Flash');
+         $this->loadComponent('Auth', [
+            'authenticate' => [
+                'Basic' => [
+                    'fields' => ['username' => 'username', 'password' => 'api_key'],
+                    'userModel' => 'Users'
+                ],
+            ],
+            'storage' => 'Memory',
+            'unauthorizedRedirect' => false
         ]);
-        $this->loadComponent('Flash');
 
-        /*
-         * Enable the following component for recommended CakePHP security settings.
-         * see https://book.cakephp.org/3.0/en/controllers/components/security.html
-         */
-        //$this->loadComponent('Security');
-    }
-}
+         /*
+          * Enable the following component for recommended CakePHP security settings.
+          * see https://book.cakephp.org/3.0/en/controllers/components/security.html
+          */
+         //$this->loadComponent('Security');
+     }
+
+     public function beforeFilter(Event $event) {
+         $this->Auth->allow(['add']);
+     }
+ }

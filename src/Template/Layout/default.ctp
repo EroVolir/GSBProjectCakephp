@@ -42,13 +42,14 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         </ul>
         <div class="top-bar-section">
             <ul class="right">
-                <li><?= $this->Html->link(__('Familles'), ['controller' => 'Familles', 'action' => 'index']) ?></li>
-            <li><?= $this->Html->link(__('Praticiens'), ['controller' => 'Praticiens', 'action' => 'index']) ?></li>
-            <li><?= $this->Html->link(__('Produits'), ['controller' => 'Produits', 'action' => 'index']) ?></li>
-            <li><?= $this->Html->link(__('Specialites'), ['controller' => 'Specialites', 'action' => 'index']) ?></li>
-	    <li><?= $this->Html->link(__('Types'), ['controller' => 'Types', 'action' => 'index']) ?></li>
-   	    <li><?= $this->Html->link(__('Visites'), ['controller' => 'Visites', 'action' => 'index']) ?></li>
-	    <li><?= $this->Html->link(__('Visiteurs'), ['controller' => 'Visiteurs', 'action' => 'index']) ?></li>
+               <li><?= $this->Html->link(__('Familles'), ['controller' => 'Familles', 'action' => 'index']) ?></li>
+               <li><?= $this->Html->link(__('Praticiens'), ['controller' => 'Praticiens', 'action' => 'index']) ?></li>
+               <li><?= $this->Html->link(__('Produits'), ['controller' => 'Produits', 'action' => 'index']) ?></li>
+               <li><?= $this->Html->link(__('Specialites'), ['controller' => 'Specialites', 'action' => 'index']) ?></li>
+	             <li><?= $this->Html->link(__('Types'), ['controller' => 'Types', 'action' => 'index']) ?></li>
+   	           <li><?= $this->Html->link(__('Visites'), ['controller' => 'Visites', 'action' => 'index']) ?></li>
+	             <li><?= $this->Html->link(__('Visiteurs'), ['controller' => 'Visiteurs', 'action' => 'index']) ?></li>
+               <li><?= $this->Html->link(__('Users'), ['controller' => 'Users', 'action' => 'index']) ?></li>
             </ul>
         </div>
     </nav>

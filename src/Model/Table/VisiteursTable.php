@@ -9,6 +9,8 @@ use Cake\Validation\Validator;
 /**
  * Visiteurs Model
  *
+ * @property \App\Model\Table\UsersTable&\Cake\ORM\Association\BelongsTo $Users
+ *
  * @method \App\Model\Entity\Visiteur get($primaryKey, $options = [])
  * @method \App\Model\Entity\Visiteur newEntity($data = null, array $options = [])
  * @method \App\Model\Entity\Visiteur[] newEntities(array $data, array $options = [])
@@ -33,6 +35,10 @@ class VisiteursTable extends Table
         $this->setTable('visiteurs');
         $this->setDisplayField('id');
         $this->setPrimaryKey('id');
+
+        $this->belongsTo('Users', [
+            'foreignKey' => 'user_id'
+        ]);
     }
 
     /**
@@ -76,5 +82,19 @@ class VisiteursTable extends Table
             ->allowEmptyDate('dateEmbauche');
 
         return $validator;
+    }
+
+    /**
+     * Returns a rules checker object that will be used for validating
+     * application integrity.
+     *
+     * @param \Cake\ORM\RulesChecker $rules The rules object to be modified.
+     * @return \Cake\ORM\RulesChecker
+     */
+    public function buildRules(RulesChecker $rules)
+    {
+        $rules->add($rules->existsIn(['user_id'], 'Users'));
+
+        return $rules;
     }
 }

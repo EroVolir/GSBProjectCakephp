@@ -19,12 +19,12 @@ class VisiteursController extends AppController
      */
     public function index()
     {
+        $this->paginate = [
+            'contain' => ['Users']
+        ];
         $visiteurs = $this->paginate($this->Visiteurs);
 
         $this->set(compact('visiteurs'));
-        $this->set([
-            '_serialize' => ['visiteurs']
-        ]);
     }
 
     /**
@@ -37,13 +37,10 @@ class VisiteursController extends AppController
     public function view($id = null)
     {
         $visiteur = $this->Visiteurs->get($id, [
-            'contain' => []
+            'contain' => ['Users']
         ]);
 
         $this->set('visiteur', $visiteur);
-        $this->set([
-            '_serialize' => ['visiteurs']
-        ]);
     }
 
     /**
@@ -63,7 +60,8 @@ class VisiteursController extends AppController
             }
             $this->Flash->error(__('The visiteur could not be saved. Please, try again.'));
         }
-        $this->set(compact('visiteur'));
+        $users = $this->Visiteurs->Users->find('list', ['limit' => 200]);
+        $this->set(compact('visiteur', 'users'));
     }
 
     /**
@@ -87,7 +85,8 @@ class VisiteursController extends AppController
             }
             $this->Flash->error(__('The visiteur could not be saved. Please, try again.'));
         }
-        $this->set(compact('visiteur'));
+        $users = $this->Visiteurs->Users->find('list', ['limit' => 200]);
+        $this->set(compact('visiteur', 'users'));
     }
 
     /**

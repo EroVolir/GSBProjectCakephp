@@ -8,6 +8,8 @@
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Html->link(__('New Visiteur'), ['action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('List Users'), ['controller' => 'Users', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('New User'), ['controller' => 'Users', 'action' => 'add']) ?></li>
     </ul>
 </nav>
 <div class="visiteurs index large-9 medium-8 columns content">
@@ -22,6 +24,7 @@
                 <th scope="col"><?= $this->Paginator->sort('tel') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('mail') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('dateEmbauche') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('user_id') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
         </thead>
@@ -35,6 +38,7 @@
                 <td><?= h($visiteur->tel) ?></td>
                 <td><?= h($visiteur->mail) ?></td>
                 <td><?= h($visiteur->dateEmbauche) ?></td>
+                <td><?= $visiteur->has('user') ? $this->Html->link($visiteur->user->id, ['controller' => 'Users', 'action' => 'view', $visiteur->user->id]) : '' ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $visiteur->id]) ?>
                     <?= $this->Html->link(__('Edit'), ['action' => 'edit', $visiteur->id]) ?>

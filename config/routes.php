@@ -45,17 +45,11 @@ use Cake\Routing\Route\DashedRoute;
  */
 Router::defaultRouteClass(DashedRoute::class);
 
-Router::scope('/', function (RouteBuilder $routes) 
-{ // Register scoped middleware for in scopes.
-  $routes->setExtensions(['json']);
-  $routes->resources('Visiteurs');
-  $routes->resources('Praticiens');
-  $routes->resources('Visites');
-  $routes->resources('Produits');
-  $routes->registerMiddleware('csrf', new CsrfProtectionMiddleware([
+Router::scope('/', function (RouteBuilder $routes) {
+    // Register scoped middleware for in scopes.
+    $routes->registerMiddleware('csrf', new CsrfProtectionMiddleware([
         'httpOnly' => true
     ]));
-
 
     /**
      * Apply a middleware to the current route scope.

@@ -22,8 +22,10 @@ class VisiteursFixture extends TestFixture
         'tel' => ['type' => 'string', 'length' => 1000, 'null' => true, 'default' => null, 'collate' => 'French_CI_AS', 'precision' => null, 'comment' => null, 'fixed' => null],
         'mail' => ['type' => 'string', 'length' => 1000, 'null' => true, 'default' => null, 'collate' => 'French_CI_AS', 'precision' => null, 'comment' => null, 'fixed' => null],
         'dateEmbauche' => ['type' => 'date', 'length' => null, 'null' => true, 'default' => null, 'precision' => null, 'comment' => null],
+        'user_id' => ['type' => 'integer', 'length' => 10, 'null' => true, 'default' => null, 'precision' => null, 'comment' => null, 'unsigned' => null, 'autoIncrement' => null],
         '_constraints' => [
             'primary' => ['type' => 'primary', 'columns' => ['id'], 'length' => []],
+            'FK_Visiteurs_users' => ['type' => 'foreign', 'columns' => ['user_id'], 'references' => ['users', 'id'], 'update' => 'noAction', 'delete' => 'noAction', 'length' => []],
         ],
     ];
     // @codingStandardsIgnoreEnd
@@ -42,7 +44,8 @@ class VisiteursFixture extends TestFixture
                 'prenom' => 'Lorem ipsum dolor sit amet',
                 'tel' => 'Lorem ipsum dolor sit amet',
                 'mail' => 'Lorem ipsum dolor sit amet',
-                'dateEmbauche' => '2020-03-25'
+                'dateEmbauche' => '2020-05-05',
+                'user_id' => 1
             ],
         ];
         parent::init();

@@ -4,9 +4,9 @@ namespace App\Test\Fixture;
 use Cake\TestSuite\Fixture\TestFixture;
 
 /**
- * PracticiensFixture
+ * PraticiensFixture
  */
-class PracticiensFixture extends TestFixture
+class PraticiensFixture extends TestFixture
 {
     /**
      * Fields
@@ -28,9 +28,9 @@ class PracticiensFixture extends TestFixture
         'Visiteur_id' => ['type' => 'integer', 'length' => 10, 'null' => true, 'default' => null, 'precision' => null, 'comment' => null, 'unsigned' => null, 'autoIncrement' => null],
         '_constraints' => [
             'primary' => ['type' => 'primary', 'columns' => ['id'], 'length' => []],
-            'FK_Practiciens_Specialites' => ['type' => 'foreign', 'columns' => ['Specialite_id'], 'references' => ['Specialites', 'id'], 'update' => 'noAction', 'delete' => 'noAction', 'length' => []],
-            'FK_Practiciens_Types' => ['type' => 'foreign', 'columns' => ['Type_id'], 'references' => ['Types', 'id'], 'update' => 'noAction', 'delete' => 'noAction', 'length' => []],
-            'FK_Practiciens_Visiteurs' => ['type' => 'foreign', 'columns' => ['Visiteur_id'], 'references' => ['Visiteurs', 'id'], 'update' => 'noAction', 'delete' => 'noAction', 'length' => []],
+            'FK_Praticiens_Types' => ['type' => 'foreign', 'columns' => ['Type_id'], 'references' => ['Types', 'id'], 'update' => 'noAction', 'delete' => 'noAction', 'length' => []],
+            'FK_Praticiens_Specialites' => ['type' => 'foreign', 'columns' => ['Specialite_id'], 'references' => ['Specialites', 'id'], 'update' => 'noAction', 'delete' => 'noAction', 'length' => []],
+            'FK_Praticiens_Visiteurs' => ['type' => 'foreign', 'columns' => ['Visiteur_id'], 'references' => ['Visiteurs', 'id'], 'update' => 'noAction', 'delete' => 'noAction', 'length' => []],
         ],
     ];
     // @codingStandardsIgnoreEnd

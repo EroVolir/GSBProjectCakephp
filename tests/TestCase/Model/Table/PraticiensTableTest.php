@@ -1,21 +1,21 @@
 <?php
 namespace App\Test\TestCase\Model\Table;
 
-use App\Model\Table\VisiteursTable;
+use App\Model\Table\PraticiensTable;
 use Cake\ORM\TableRegistry;
 use Cake\TestSuite\TestCase;
 
 /**
- * App\Model\Table\VisiteursTable Test Case
+ * App\Model\Table\PraticiensTable Test Case
  */
-class VisiteursTableTest extends TestCase
+class PraticiensTableTest extends TestCase
 {
     /**
      * Test subject
      *
-     * @var \App\Model\Table\VisiteursTable
+     * @var \App\Model\Table\PraticiensTable
      */
-    public $Visiteurs;
+    public $Praticiens;
 
     /**
      * Fixtures
@@ -23,8 +23,10 @@ class VisiteursTableTest extends TestCase
      * @var array
      */
     public $fixtures = [
-        'app.Visiteurs',
-        'app.Users'
+        'app.Praticiens',
+        'app.Specialites',
+        'app.Types',
+        'app.Visiteurs'
     ];
 
     /**
@@ -35,8 +37,8 @@ class VisiteursTableTest extends TestCase
     public function setUp()
     {
         parent::setUp();
-        $config = TableRegistry::getTableLocator()->exists('Visiteurs') ? [] : ['className' => VisiteursTable::class];
-        $this->Visiteurs = TableRegistry::getTableLocator()->get('Visiteurs', $config);
+        $config = TableRegistry::getTableLocator()->exists('Praticiens') ? [] : ['className' => PraticiensTable::class];
+        $this->Praticiens = TableRegistry::getTableLocator()->get('Praticiens', $config);
     }
 
     /**
@@ -46,7 +48,7 @@ class VisiteursTableTest extends TestCase
      */
     public function tearDown()
     {
-        unset($this->Visiteurs);
+        unset($this->Praticiens);
 
         parent::tearDown();
     }
