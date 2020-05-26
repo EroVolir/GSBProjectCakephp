@@ -25,6 +25,7 @@ class PraticiensController extends AppController
         $praticiens = $this->paginate($this->Praticiens);
 
         $this->set(compact('praticiens'));
+        $this->set('_serialize', ['praticiens']);
     }
 
     /**
@@ -41,6 +42,7 @@ class PraticiensController extends AppController
         ]);
 
         $this->set('praticien', $praticien);
+        $this->set('_serialize', ['praticien']);
     }
 
     /**

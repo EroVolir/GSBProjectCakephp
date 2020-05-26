@@ -25,6 +25,8 @@ class VisiteursController extends AppController
         $visiteurs = $this->paginate($this->Visiteurs);
 
         $this->set(compact('visiteurs'));
+        $this->set('_serialize', ['visiteurs']);
+
     }
 
     /**
@@ -41,6 +43,7 @@ class VisiteursController extends AppController
         ]);
 
         $this->set('visiteur', $visiteur);
+        $this->set('_serialize', ['visiteur']);
     }
 
     /**
